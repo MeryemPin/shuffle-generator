@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #091f33;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: #ebf5ff;
+    margin: 1rem;
+}
+#about {
+    color: #e6eaed;
+    padding: 5% 10%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#amount {
+    width: 70px;
+}
+#amount,
+button {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+button {
+    background-color: #c3d7e8;
+}
+#container {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.values {
+    background-color: rgba(255, 255, 255, 0.377);
+    margin: 1% 10%;
+    padding: 2% 4%;
+    border-radius: 50px 10px 10px 50px;
+    
+    width: 80%;
+    color: #deefff;
+}
+
+@media only screen and (min-width: 450px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #about {
+        font-size: 1.3rem;
+    }
+    #amount,
+    button {
+        padding: 10px 20px;
+    }
+    #amount {
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #amount,
+    button {
+        padding: 15px 35px;
+        font-size: 1.2rem;
+    }
+    #amount {
+        width: 150px;
+    }
+    .values {
+        margin: 5px auto;
+        padding: 0.5% 2%;
+        font-size: 1.5rem;
+    }
+}

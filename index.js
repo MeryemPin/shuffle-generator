@@ -5,7 +5,7 @@ let amountArray = [];
 let inputElement = document.getElementById('amount');
 let enterBtnElement = document.getElementById('enter');
 let shuffleBtnElement = document.getElementById('shuffle');
-let containerElement = document.querySelector('div');
+let containerElement = document.getElementById('container');
 // let containerElement = document.getElementById('container'); 
 // returns an error => its not a function. "div" is not a DOM object,is just a string,and string has no string.appendChild. 
 
@@ -16,7 +16,7 @@ function setAmount() {
     for(let i = 1; i <= amount; i++){
         amountArray.push(i);
     }
-    console.log(amountArray)
+    // console.log(amountArray)
     // creating elements based on the input 
     createElements(amountArray)
 };
@@ -26,7 +26,7 @@ function createElements( amountArray ) {
 
     amountArray.map( (item) => {
         let pElement = document.createElement('p');
-        pElement.setAttribute('id', '')
+        pElement.setAttribute('class', 'values')
         pElement.innerHTML = item;
         containerElement.appendChild(pElement);
     });
@@ -38,11 +38,11 @@ function shuffleAmount() {
     containerElement.innerHTML = null;
     amountArray.map( (item) => {
         let pElement = document.createElement('p');
-        pElement.setAttribute('id', '')
+        pElement.setAttribute('class', 'values')
         pElement.innerHTML = item;
         containerElement.appendChild(pElement);
     });
-    console.log(amountArray)
+    // console.log(amountArray)
 };
 
 enterBtnElement.addEventListener('click', setAmount);
